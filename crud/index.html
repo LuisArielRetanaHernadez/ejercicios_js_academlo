@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+    <section class="container">
+        <div class="row">
+            <div class="col-10">
+                <div class="form-cars">
+                    <form action="" onsubmit="event.preventDefault(), createAndUpdateCars()" id="form-cars">
+                        <div class="component-form">
+                            <label for="brand">Marca</label>
+                            <input type="text" placeholder="Marca" required id="brand">
+                        </div>
+                        <div class="component-form">
+                            <label for="model">Modelo</label>
+                            <input type="text" placeholder="Modelo" required id="model">
+                        </div>
+                        <div class="component-form">
+                            <label for="year">Año</label>
+                            <input type="text" placeholder="año" required id="year">
+                        </div>
+                        <div class="component-form">
+                            <label for="doors">No. Puertas</label>
+                            <input type="text" placeholder="puertas" required id="doors">
+                        </div>
+                        <div class="component-form">
+                            <label for="color">Color</label>
+                            <input type="text" placeholder="color" required id="color">
+                        </div>
+                        <div class="component-form">
+                            <label for="price">Precio(US)</label>
+                            <input type="text" placeholder="Precio" required id="price">
+                        </div>
+                        <div class="component-form">
+                            <input type="submit" placeholder="Marca" value="Guardar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-12">
+                <table id="table-record" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>Año</th>
+                            <th>No. Puertas</th>
+                            <th>Color</th>
+                            <th>Precio</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-record">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <script src="./asset/js/app.js"></script>
+</body>
+</html>

@@ -66,14 +66,16 @@ function createElemenTbodyInTable(){
 /*Pintar datos del user en el DOM*/
 function pinterData(element,dataUser){
     tbody = element()
+    let i = 1
     dataUser.forEach(data => {
+        
         tbody.innerHTML += `
         <tr>
         <td>${data.name}</td>
         <td>${data.age}</td>
         <td>${data.email}</td>
-        <th>${data.social[0].url}</td>
-        <th>${data.social[1].url}</td>
+        <th>${data.social[--i].url}</td>
+        <th>${data.social[++i].url}</td>
         </tr>
         `
     });
