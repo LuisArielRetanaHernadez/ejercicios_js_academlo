@@ -1,0 +1,32 @@
+.container{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+}
+.col-12{
+    width: 100%;
+}
+/*============*/
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    position: relative;
+}
+video{
+    max-width: 100%;
+}
+.title-header{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}

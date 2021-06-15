@@ -151,4 +151,12 @@ const getCarsLocalStorage = () => {
         showDataTbody(cars)//Aqui es donde llamamos la funcion showDataTbody para mostrar los datos
     }
 }
-getCarsLocalStorage()
+const checkSupportsLocalstorage = () =>{
+    if(localStorage){
+        getCarsLocalStorage()
+        console.log('hola')
+    }else{
+        showDataTbody(cars)
+    }
+}
+checkSupportsLocalstorage()
