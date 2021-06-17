@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(2,2,9);
+    background: linear-gradient(90deg, rgba(2,2,9,1) 0%, rgba(14,14,50,1) 50%, rgba(8,36,42,1) 100%);
+}
+p,a,label,input{
+    font-family: 'PT Sans', sans-serif;
+}
+/*======================================
+gird*/
+.container{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+.col-5{
+    width: 41.66%;
+}
+/*========================================
+Estilos del form de question*/
+.container-form-api{
+    background-color: rgba(255, 255, 255, 0.788);
+}
+.container-form-api form{
+    background-color: rgba(230, 237, 245, 0.788);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.component-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.component-form label,input,select{
+    margin: 5px 0 5px 0;
+}
+form .component-form{
+    width: 75%;
+}
+.component-form input,select{
+    width: 90%;
+    padding: 1%;
+}
+/*========================================
+*/
+/*=========================================
+clases resiclabes*/
+.m-auto{
+    margin: auto;
+}

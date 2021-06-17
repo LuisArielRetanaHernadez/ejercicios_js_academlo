@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Trivia</title>
+    <link rel="stylesheet" href="./css/mian.css">
+</head>
+<body>
+    <section class="container">
+        <div class="row">
+            <div class="col-5 m-auto">
+                <div class="container-form-api">
+                    <form action="" method="get" onsubmit="event.preventDefault(), getApi(getValueElements,starQuestion)">
+                        <div class="component-form">
+                            <label for="amount">No. Preguntas</label>
+                            <input type="number" id="amount" min="0" required placeholder="Numero de Preguntas">
+                        </div>
+                        <div class="component-form">
+                            <label for="categories">Categoria</label>
+                            <select name="" id="categories">
+                                <option value="0">Cualquier categoría</option>
+                                <option value="9">Cultura general</option>
+                                <option value="10">Libros</option>
+                                <option value="11">Películas</option>
+                                <option value="12">Música</option>
+                                <option value="13">Musicales y teatros</option>
+                                <option value="14">Televisión</option>
+                                <option value="15">Videojuegos</option>
+                                <option value="16">Juegos de mesa</option>
+                                <option value="17">Ciencia y naturaleza</option>
+                                <option value="18">Computación</option>
+                                <option value="19">Matemáticas</option>
+                                <option value="20">Mitología</option>
+                                <option value="21">Deportes</option>
+                                <option value="22">Geografía</option>
+                                <option value="23">Historia</option>
+                                <option value="24">Política</option>
+                                <option value="25">Arte</option>
+                                <option value="26">Celebridades</option>
+                                <option value="27">Animales</option>
+                                <option value="28">Autos</option>
+                                <option value="29">Comics</option>
+                                <option value="30">Gadgets</option>
+                                <option value="31">Ánime y manga</option>
+                                <option value="32">Caricaturas</option>
+                            </select>
+                        </div>
+                        <div class="component-form">
+                            <label for="difficulty">Dificultad</label>
+                            <select name="" id="difficulty">
+                                <option value="0">Cualquier dificultad</option>
+                                <option value="easy">Fácil</option>
+                                <option value="medium">Medio</option>
+                                <option value="hard">Difícil</option>
+                            </select>
+                        </div>
+                        <div class="component-form">
+                            <label for="type">Tipo de pregunta</label>
+                            <select name="" id="type">
+                                <option value="0">Cualquier tipo</option>
+                                <option value="multiple">Opción Múltiple</option>
+                                <option value="boolean">Verdadero / Falso</option>
+                            </select>
+                        </div>
+                        <div class="compenent-form-btn">
+                            <input type="submit" value="Iniciar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/app.js"></script>
+</body>
+</html>

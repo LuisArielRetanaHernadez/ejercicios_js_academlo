@@ -67,13 +67,13 @@ const createAndUpdateCars = () => {
         price
     }
     console.log(edit)
-    let pepe = avoidRedundancyDataCars(carNew)
+    let redunacy = avoidRedundancyDataCars(carNew)
     console.log(carNew)
     console.log(pepe)
-    if (edit === true && pepe === true) {
+    if (edit === true && redunacy === true) {
         cars[indexEdit] = carNew
     }
-    if(edit === false && pepe === true){
+    if(edit === false && redunacy === true){
         cars.push(carNew)
     }
     edit = false
