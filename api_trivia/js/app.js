@@ -1,11 +1,5 @@
 /*Variables globales*/
 
-const music = [
-    {
-        music
-    }
-]
-
 let index = 0;//va ser el index de los objectos de la api Trivia
 const questionResults = [];//Aqui es donde dondo se va almacenar el array del results de la api|
 let amountOfCorrect = 0 //Aqui es donde va estar la contidad de repuestas correctas
