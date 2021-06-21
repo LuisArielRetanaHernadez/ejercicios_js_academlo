@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 body{
     margin: 0;
@@ -8,6 +9,9 @@ body{
 }
 p,a,label,input{
     font-family: 'PT Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Lato', sans-serif;
 }
 /*======================================
 gird*/
@@ -27,6 +31,12 @@ gird*/
 }
 /*========================================
 Estilos del form de question*/
+.container-general{
+    display: flex;
+    align-items: center;
+    height: 48vw;
+    width: 100%;
+}
 .container-form-api{
     background-color: rgba(255, 255, 255, 0.788);
 }
@@ -52,11 +62,99 @@ form .component-form{
 .component-form input,select{
     width: 90%;
     padding: 1%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(14,14,50,1);
+    background: none;
+    outline: none;
+}
+form .component-form-btn{
+    width: 75%;
+}
+.component-form-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.component-form-btn input{
+    padding: 8px 15px;
+    width: 35%;
+    border: none;
+    border-radius: 10px;
+    background: rgb(2,2,9);
+    background: linear-gradient(90deg, rgba(2,2,9,1) 0%, rgba(14,14,50,1) 50%, rgba(8,36,42,1) 100%);
 }
 /*========================================
-*/
+estilos del questenario*/
+.container-questenary{
+    background-color: rgba(230, 237, 245, 0.788);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 15px;
+}
+.container-questenary .bar-status{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-questenary .questenary{
+    width: 100%;
+    text-align: center;
+}
+.container-questenary .answers{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.answers input{
+    padding: 8px 15px;
+    background: rgb(2,2,9);
+    background: linear-gradient(90deg, rgba(2,2,9,1) 0%, rgba(14,14,50,1) 50%, rgba(8,36,42,1) 100%);
+    color: black;
+    border: none;
+    border-radius: 10px;
+    width: 35%;
+    margin: 10px;
+    justify-content: space-around;
+    transition: .4s;
+}
+#btn_1:hover{
+    background-color: rgba(230, 237, 245, 0.788);
+}
+/*Resultados del container-resultsQuestenary*/
+#container-results-questenary{
+    background-color: rgba(230, 237, 245, 0.788);
+}
+.bar-results{
+    padding: 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+.container-qualification{
+    text-align: center;
+    background-color: burlywood;
+}
+.container-qualification h2{
+    margin: 0;
+}
 /*=========================================
 clases resiclabes*/
 .m-auto{
     margin: auto;
+}
+.d-none{
+    display: none;
+}
+.d-flex{
+    display: flex;
 }
