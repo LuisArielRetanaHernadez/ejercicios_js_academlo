@@ -1,5 +1,7 @@
 /*Variables globales*/
 
+const music = ['']
+
 let index = 0;//va ser el index de los objectos de la api Trivia
 const questionResults = [];//Aqui es donde dondo se va almacenar el array del results de la api|
 let amountOfCorrect = 0 //Aqui es donde va estar la contidad de repuestas correctas
@@ -88,7 +90,7 @@ const starQuestion = () => {
     console.log(typeof(document.getElementById('id-questenary').innerHTML))
     document.getElementById('text_category').innerHTML = 'Categoria: ' + questionResults[index].category
     document.getElementById('text_difficulty').innerHTML = 'Dificultad: ' + questionResults[index].difficulty
-    document.getElementById('text_accountant').innerHTML = `${(index)} / ${questionResults.length}`
+    document.getElementById('text_accountant').innerHTML = `${(index + 1)} / ${questionResults.length}`
     document.getElementById('text-questenary').innerHTML = questionResults[index].question
     if (types[index] == "true") {
         document.getElementById("btn_1").value = "true"
@@ -157,28 +159,29 @@ const getAnswers = idBtn =>{
 
     if(questionResults.length === index){
         finallyQuestion(amountOfCorrect)
-        clearTimeout(timeQuestion)
-        removeLocalstorage('containerQuestenary')
         document.getElementById('id-questenary').style.display= 'none';
     }else{
         console.log(questionResults[index].correct_answer, ' repuesta >>>', btn)
         if(btn == questionResults[index].correct_answer){//validamos las respuesta del usuario si son correcta o incorrecta
             amountOfCorrect++
-            console.log(incorrect_answers, ' if >>>', btn)
+            console.log(questionResults[index].correct_answer, ' if >>>', btn)
         }
+        index++
         starQuestion()
     }
-    index++
+    console.log('index >>', index)
 }
 
 /*Aqui es donde ya finalizamos el cuestenario y donde el resultado de la encuesta*/
 const finallyQuestion = questionsCorrect =>{
     document.getElementById('container-results-questenary').style.display = 'block'
     const valueForm = getLocalstorage('valuesForm',false)
-    valueForm[1] == 0 ? document.getElementById('result-category').innerHTML = 'Categoria: cualquiera' : document.getElementById('result-category').innerHTML = 'Categoria',questionResults[0].category
-    valueForm[2] == 0 ? document.getElementById('result-difficulty').innerHTML =  'Dificultad: Cualquiera' : document.getElementById('result-difficulty').innerHTML = 'Dificultad',questionResults[0].difficulty
-    document.getElementById('result-qualification').innerHTML = Math.floor((questionsCorrect / questionResults.length) * 100), '%'
-    removeLocalstorage('questionResults')
+    valueForm[1] == 0 ? document.getElementById('result-category').innerHTML = 'Categoria: cualquiera' : document.getElementById('result-category').innerHTML = `Categoria: ${questionResults[0].category}`
+    valueForm[2] == 0 ? document.getElementById('result-difficulty').innerHTML =  'Dificultad: Cualquiera' : document.getElementById('result-difficulty').innerHTML = `Dificultad: ${questionResults[0].difficulty}`
+    document.getElementById('result-time').innerHTML = `timepo: ${getLocalstorage('time',true)}`
+    document.getElementById('result-qualification').innerHTML = ` ${Math.floor((questionsCorrect / questionResults.length) * 100)}%`
+    removeLocalstorage('time')
+    localStorage.clear()
 }
 
 const timeQuestion = () =>{
@@ -190,7 +193,14 @@ const timeQuestion = () =>{
     if(minutesAccountant > 60){
         hoursAccountant += 1
     }
-    setTimeout(timeQuestion,1000)
+
+    const clear = setTimeout(timeQuestion,1000)
+    if (questionResults.length === index){
+        clearTimeout(clear)
+    }else{
+        const timeLocal = `${hoursAccountant} : ${minutesAccountant} : ${secondsAccountant}`
+        setLocalstorage('time', timeLocal)
+    }
     document.getElementById('text_time').innerHTML = `${hoursAccountant} : ${minutesAccountant} : ${secondsAccountant}`
 }
 
