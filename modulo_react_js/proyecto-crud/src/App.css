@@ -1,0 +1,163 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*========================*/
+.container{
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+.row{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-11{
+  width: 91.66%;
+  height: auto;
+}
+/*=======================*/
+.img-header-web{
+  background: rgb(182,20,134);
+  background: linear-gradient(90deg, rgba(182,20,134,1) 0%, rgba(176,19,115,1) 45%, rgba(95,14,149,1) 82%);
+  height: 40vh;
+}
+/*=====ESTILOS DEL COMPONENTE MENUWEB=====*/
+.container-menu-web{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.container-menu-web .menu-web{
+  width: 90%;
+}
+.menu-web{
+  display: flex;
+}
+.menu-web .items-menu-web{
+  width: 100%;
+  height: auto;
+}
+.items-menu-web{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+  margin: 1px;
+}
+.items-order{
+  height: auto;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: start;
+  padding: 0px;
+  margin: 1px;
+}
+.items-order .item-menu-web{
+  width: 100%;
+}
+.item-menu-web .btn-menu-order{
+  width: 100%;
+}
+.btn-menu-order{
+  background: none;
+  border: none;
+  margin: 3px;
+  box-sizing: border-box;
+}
+/*======ESTILOS DEL COMPONENTE TODOITEM*/
+.container-chores{
+  width: 100%;
+  height: auto;
+  background-color: #282c34;
+  padding: 5px;
+  margin: 5px;
+  box-sizing: border-box;
+}
+.elements-chores{
+  background-color: #61dafb;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.elements-chores .container-form-checkbox{
+  width: 30%;
+  background-color: brown;
+}
+.checkbox-full-incomplete{
+  border-radius: 50%;
+  padding: 30px;
+}
+.elements-chores .container-task{
+  width: 69%;
+  background-color: blue;
+}
+.name-student{
+  font-size: 13px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: end;
+}
+.task{
+  font-size: 19px;
+  font-style: italic;
+}
+/*=======================*/
+.color-white{
+  color: white;
+}
+.list-style-none{
+  list-style: none;
+}
+.m-1{
+  margin: 1px;
+}
+/*==========*/
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-direction-column{
+  display: flex;
+  flex-direction: column;
+}
